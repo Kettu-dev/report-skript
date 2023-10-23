@@ -8,3 +8,5 @@
 <p>report.receive : recevoir les signalements</p>
 <h2>Interface :</h2>
 <p><img src="https://i.goopics.net/xv5lgj.png"></p>
+<h2>Téléchargement :</h2>
+<p>Vous pouvez télécharger le plugin <a href="https://skript-mc.fr/forum/applications/core/interface/file/attachment.php?id=4090">ici</a>.</p>
