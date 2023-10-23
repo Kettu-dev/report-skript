@@ -1,1 +1,3 @@
 <h1>Skript - Report</h1>
+<hr>
+A simple report plugin in Skript...
