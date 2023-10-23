@@ -1,0 +1,30 @@
+function Report(p1: player, p2: player):
+    create a gui with virtual chest inventory with 6 rows named "&4Signaler":
+        edit gui last gui:
+            format gui slot 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44 with grey glass pane named " "
+            format gui slot 21 with iron sword named "&cCheat" with lore "&b- Xray", "&b- Duplication", "&b- Etc":
+                send "&cMerci pour votre signalement !" to player
+                close player's inventory
+                loop all players:
+                    if loop-player has permission "report.receive":
+                        send "&c%{_p2}% a été signalé pour cheat par %{_p1}%." to loop-player
+            format gui slot 22 with writable book named "&cChat" with lore "&b- Insultes", "&b- Menaces", "&b- Etc":
+                send "&cMerci pour votre signalement !" to player
+                close player's inventory
+                loop all players:
+                    if loop-player has permission "report.receive":
+                        send "&c%{_p2}% a été signalé pour une infraction dans le chat par %{_p1}%." to loop-player
+            format gui slot 23 with player head named "&cProfil" with lore "&b- Pseudo","&b- Skin", "&b- Etc":
+                send "&cMerci pour votre signalement !" to player
+                close player's inventory
+                loop all players:
+                    if loop-player has permission "report.receive":
+                        send "&c%{_p2}% a été signalé pour son profil par %{_p1}%." to loop-player
+            format gui slot 45 with book named "&6Aide"
+            format gui slot 53 with barrier named "&cAnnuler":
+                close player's inventory
+            open last created gui to {_p1}
+
+command /report <player>:
+    trigger:
+        Report(player, arg-1)
