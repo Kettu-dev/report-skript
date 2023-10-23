@@ -20,11 +20,13 @@ function Report(p1: player, p2: player):
                 loop all players:
                     if loop-player has permission "report.receive":
                         send "&c%{_p2}% a été signalé pour son profil par %{_p1}%." to loop-player
-            format gui slot 45 with book named "&6Aide"
-            format gui slot 53 with barrier named "&cAnnuler":
+            format gui slot 49 with barrier named "&cAnnuler":
                 close player's inventory
             open last created gui to {_p1}
 
-command /report <player>:
+command /report [<player>]:
     trigger:
-        Report(player, arg-1)
+        if arg 1 is not set:
+            send "&6Veuillez entrer le pseudo de la personne que vous souhaitez signaler..."
+        else:
+            Report(player, arg-1)
