@@ -6,3 +6,5 @@
 <p>/report joueur</p>
 <h2>Permission :</h2>
 <p>report.receive : recevoir les signalements</p>
+<h2>Interface :</h2>
+<p><img src="https://i.goopics.net/xv5lgj.png"></p>
